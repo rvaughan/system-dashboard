@@ -10,15 +10,15 @@ import subprocess
 from flask import Flask
 from flask_cors import CORS, cross_origin
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="", static_folder='')
 CORS(app)   # Necessary since API is running locally
 
 # Should match the period (in seconds) in Freeboard
 period = 1
 
 # Disable Flask console messages: http://stackoverflow.com/a/18379764
-log = logging.getLogger('werkzeug')
-log.setLevel(logging.ERROR)
+#log = logging.getLogger('werkzeug')
+#log.setLevel(logging.ERROR)
 
 
 @cross_origin()
@@ -106,9 +106,18 @@ def nvidia():
 
     return json.dumps({"data":gpus})
 
+@cross_origin()
+@app.route('/<path:path>')
+def static_file(path):
+    return app.send_static_file(path)
+
+@cross_origin()
+@app.route('/')
+def root():
+    return app.send_static_file('system_dashboard.html')
 
 
 if __name__ == "__main__":
     print("System API up at http://localhost:5002")
     PORT = int(os.getenv('PORT', 5002))
-    app.run(port=PORT, threaded=True, debug=True)
+    app.run(port=PORT, threaded=True, debug=True)    
