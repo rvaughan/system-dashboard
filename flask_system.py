@@ -116,4 +116,4 @@ def root():
 if __name__ == "__main__":    
     PORT = int(os.getenv('PORT', 5002))
     print("System API up at http://localhost:{}".format(PORT))
-    app.run(port=PORT, threaded=True, debug=True)    
+    app.run(port=PORT, host="0.0.0.0", threaded=True, debug=True)    
