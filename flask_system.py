@@ -7,7 +7,7 @@ import psutil
 import xmltodict
 import subprocess
 
-from flask import Flask
+from flask import Flask, redirect
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__, static_url_path="", static_folder='')
@@ -83,26 +83,21 @@ def processes():
 def nvidia():
 
     time.sleep(period)
-    # TODO
-    """ 
+    # Switch for testing purposes
+     
     nvidia_smi = subprocess.Popen(["nvidia-smi", "-q", "-x"], stdout=subprocess.PIPE)
     nv_dict = xmltodict.parse(nvidia_smi.stdout.read())
-    """
-    nv_dict = xmltodict.parse(open("/home/trnkat/Documents/nv.txt").read())
+    
+    #nv_dict = xmltodict.parse(open("/home/trnkat/Documents/nv.txt").read())
+
     gpus = []
     if 'nvidia_smi_log' in nv_dict:
         log = nv_dict["nvidia_smi_log"]
         for gpu in log["gpu"]:
-            fields = ["processes", "@id", "fan_speed", "utilization",
-                      "temperature", "clocks"]
+            fields = ["product_name","fb_memory_usage"  "processes", "@id", "fan_speed", "utilization",
+                      "temperature", "clocks" ,"power_readings"]
             gpu_dict = {f:gpu[f] for f in fields}
             gpus.append(gpu_dict)            
-
-    #cpu_data = psutil.cpu_percent(interval=None)
-    #ram_data = psutil.virtual_memory()
-    #disk_data = psutil.disk_usage('/')
-    #disk_write_data = psutil.disk_io_counters(perdisk=False)
-    #io_data = psutil.net_io_counters()
 
     return json.dumps({"data":gpus})
 
@@ -114,10 +109,11 @@ def static_file(path):
 @cross_origin()
 @app.route('/')
 def root():
-    return app.send_static_file('system_dashboard.html')
+    """ Redir to default template """
+    return redirect('/system_dashboard.html#source=boards/default.json')
 
 
-if __name__ == "__main__":
-    print("System API up at http://localhost:5002")
+if __name__ == "__main__":    
     PORT = int(os.getenv('PORT', 5002))
+    print("System API up at http://localhost:{}".format(PORT))
     app.run(port=PORT, threaded=True, debug=True)    

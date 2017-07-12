@@ -1,0 +1,571 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "nvidia",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 7,
+				"5": 1
+			},
+			"col": {
+				"3": 1,
+				"4": -15,
+				"5": 2
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Id",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][0][\"@id\"].split(\":\")[1]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Utilization",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][0][\"utilization\"][\"memory_util\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Memory temperature",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][0][\"temperature\"][\"gpu_temp\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "memory",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][0][\"utilization\"][\"memory_util\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Fan speed",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][0][\"fan_speed\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Clocks",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][0][\"clocks\"][\"graphics_clock\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "MHz"
+					}
+				}
+			]
+		},
+		{
+			"title": "nvidia",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1,
+				"5": 1
+			},
+			"col": {
+				"3": 3,
+				"4": -7,
+				"5": 2
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Id",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][1][\"@id\"].split(\":\")[1]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Utilization",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][1][\"utilization\"][\"memory_util\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Memory temperature",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][1][\"temperature\"][\"gpu_temp\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "memory",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][1][\"utilization\"][\"memory_util\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Fan speed",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][1][\"fan_speed\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Clocks",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][1][\"clocks\"][\"graphics_clock\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "MHz"
+					}
+				}
+			]
+		},
+		{
+			"title": "nvidia",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1,
+				"5": 1
+			},
+			"col": {
+				"3": 2,
+				"4": 4,
+				"5": 2
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Id",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][2][\"@id\"].split(\":\")[1]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Utilization",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][2][\"utilization\"][\"memory_util\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Memory temperature",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][2][\"temperature\"][\"gpu_temp\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "memory",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][2][\"utilization\"][\"memory_util\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Fan speed",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][2][\"fan_speed\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Clocks",
+						"size": "regular",
+						"value": "datasources[\"nvidi-smi\"][\"data\"][2][\"clocks\"][\"graphics_clock\"].split(\" \")[0]",
+						"sparkline": true,
+						"animate": true,
+						"units": "MHz"
+					}
+				}
+			]
+		},
+		{
+			"title": "Processes",
+			"width": 1,
+			"row": {
+				"3": 25,
+				"4": 25
+			},
+			"col": {
+				"3": 1,
+				"4": 1
+			},
+			"col_width": "4",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "// Example: Convert temp from C to F and truncate to 2 decimal places.\n// return (datasources[\"MyDatasource\"].sensor.tempInF * 1.8 + 32).toFixed(2);\n// Example: Convert temp from C to F and truncate to 2 decimal places.\n// return (datasources[\"MyDatasource\"].sensor.tempInF * 1.8 + 32).toFixed(2);\nvar table_data = [];\nconsole.log(\"sem tu\")\nvar fields = [\"pid\", \"user\", \"process name\", \"used memory\", \"gpu\"];\nvar proces_user = datasources[\"Processes\"][\"data\"]\nfor(var i = 0; i < datasources[\"nvidi-smi\"][\"data\"].length; i++){\n    var gpu = datasources[\"nvidi-smi\"][\"data\"][i];\n    var processes = gpu[\"processes\"][\"process_info\"];\n    console.log(\"test\");\n    if (!(processes)){\n        continue;\n    }\n    processes = (Array.isArray(processes)) ? processes : [processes];\n    for (var j=0; j < processes.length; j++){\n        var process = processes[j];\n        var user = proces_user[process[\"pid\"]]\n        var process_object = {\"pid\": process[\"pid\"],                              \n                              \"user\": user,\n                          \"process name\": process[\"process_name\"],\n                          \"used memory\": process[\"used_memory\"],\n                              \"gpu\":gpu[\"@id\"].split(\":\")[1]};\n        table_data.push(process_object);\n    }\n}\nvar tbody = \"\"\nfor(row of table_data){\n    tbody += \"<tr>\"\n    for (f of fields){\n        tbody += \"<td>\" + row[f] + \"</td>\"\n    }\n    tbody += \"</tr>\"\n}\n\nreturn \"<div><table><thead><tr><th>\" + \n    fields.join(\"</th><th>\") + \"</th></tr></thead><tbody>\" + tbody +\n    \"</tbody></table></div>\";\n//var st = [a[\"pid\"], a[\"type\"], a[\"process_name\"], a[\"used_memory\"]].join(\"\\t\")",
+						"height": 2
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 31,
+				"4": 1,
+				"5": 13,
+				"6": 13,
+				"7": 13
+			},
+			"col": {
+				"3": 1,
+				"4": 2,
+				"5": 5,
+				"6": 5,
+				"7": 5
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"Clock\"][\"time_string_value\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "CPU",
+			"width": 1,
+			"row": {
+				"3": 35,
+				"4": 1,
+				"5": 17,
+				"6": 17,
+				"7": 17
+			},
+			"col": {
+				"3": 1,
+				"4": 3,
+				"5": 5,
+				"6": 5,
+				"7": 5
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "big",
+						"value": "datasources[\"System Dashboard Flask\"][\"cpu\"][\"percent\"].toFixed(1)",
+						"sparkline": true,
+						"animate": false,
+						"units": "%"
+					}
+				}
+			]
+		},
+		{
+			"title": "Disk Usage",
+			"width": 1,
+			"row": {
+				"3": 37,
+				"4": 35,
+				"5": 27,
+				"6": 27,
+				"7": 27
+			},
+			"col": {
+				"3": 2,
+				"4": 4,
+				"5": 4,
+				"6": 4,
+				"7": 4
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Space Used",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"disk\"][\"used\"] / (1000 * 1024 * 1024)).toFixed(2)",
+						"animate": true,
+						"units": "GB"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Disk Total",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"disk\"][\"total\"] / (1000 * 1024 * 1024)).toFixed(2)",
+						"animate": true,
+						"units": "GB"
+					}
+				}
+			]
+		},
+		{
+			"title": "I/O",
+			"width": 1,
+			"row": {
+				"3": 41,
+				"4": 13,
+				"5": 13,
+				"6": 13,
+				"7": 13
+			},
+			"col": {
+				"3": 3,
+				"4": 3,
+				"5": 3,
+				"6": 3,
+				"7": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Bytes Sent / Sec",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"io\"][\"sent_bytes_sec\"] / 1000000).toFixed(3)",
+						"sparkline": true,
+						"animate": false,
+						"units": "MB"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Bytes Received / Sec",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"io\"][\"received_bytes_sec\"] / 1000000).toFixed(3)",
+						"sparkline": true,
+						"animate": false,
+						"units": "MB"
+					}
+				}
+			]
+		},
+		{
+			"title": "RAM",
+			"width": 1,
+			"row": {
+				"3": 41,
+				"4": 7,
+				"5": 23,
+				"6": 23,
+				"7": 23
+			},
+			"col": {
+				"3": 1,
+				"4": 3,
+				"5": 5,
+				"6": 5,
+				"7": 5
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "big",
+						"value": "datasources[\"System Dashboard Flask\"][\"ram\"][\"percent\"].toFixed(1)",
+						"sparkline": true,
+						"animate": false,
+						"units": "%"
+					}
+				}
+			]
+		},
+		{
+			"title": "Disk",
+			"width": 1,
+			"row": {
+				"3": 31,
+				"4": 41,
+				"5": 13,
+				"6": 13,
+				"7": 13
+			},
+			"col": {
+				"3": 3,
+				"4": 4,
+				"5": 4,
+				"6": 4,
+				"7": 4
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Bytes Read / Sec",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"disk\"][\"read_bytes_sec\"] / 1000000).toFixed(3)",
+						"sparkline": true,
+						"animate": false,
+						"units": "MB"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Bytes Written / Sec",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"disk\"][\"write_bytes_sec\"] / 1000000).toFixed(3)",
+						"sparkline": true,
+						"animate": false,
+						"units": "MB"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 31,
+				"4": 1,
+				"5": 27,
+				"6": 27,
+				"7": 27
+			},
+			"col": {
+				"3": 2,
+				"4": 1,
+				"5": 3,
+				"6": 3,
+				"7": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "RAM Used",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"ram\"][\"used\"] / (1000 * 1024 * 1024)).toFixed(2)",
+						"sparkline": false,
+						"animate": false,
+						"units": "GB"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "RAM Total",
+						"size": "regular",
+						"value": "(datasources[\"System Dashboard Flask\"][\"ram\"][\"total\"] / (1000 * 1024 * 1024)).toFixed(2)",
+						"sparkline": false,
+						"animate": true,
+						"units": "GB"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "System Dashboard Flask",
+			"type": "JSON",
+			"settings": {
+				"url": "/cpu",
+				"use_thingproxy": false,
+				"refresh": 1,
+				"method": "GET"
+			}
+		},
+		{
+			"name": "Clock",
+			"type": "clock",
+			"settings": {
+				"refresh": 1
+			}
+		},
+		{
+			"name": "nvidi-smi",
+			"type": "JSON",
+			"settings": {
+				"url": "/nvidia-smi",
+				"use_thingproxy": true,
+				"refresh": 0.5,
+				"method": "GET"
+			}
+		},
+		{
+			"name": "Processes",
+			"type": "JSON",
+			"settings": {
+				"url": "processes",
+				"use_thingproxy": true,
+				"refresh": 5,
+				"method": "GET"
+			}
+		}
+	],
+	"columns": 3
+}
