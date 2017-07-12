@@ -94,7 +94,7 @@ def nvidia():
     if 'nvidia_smi_log' in nv_dict:
         log = nv_dict["nvidia_smi_log"]
         for gpu in log["gpu"]:
-            fields = ["product_name","fb_memory_usage"  "processes", "@id", "fan_speed", "utilization",
+            fields = ["product_name","fb_memory_usage","processes", "@id", "fan_speed", "utilization",
                       "temperature", "clocks" ,"power_readings"]
             gpu_dict = {f:gpu[f] for f in fields}
             gpus.append(gpu_dict)            
